@@ -2,4 +2,20 @@
 <script>
 alert("did this work?");
 console.log("did this work?");
+  function makeRequest() {
+  var promise = document.requestStorageAccess();
+  promise.then(
+    function () {
+      console.log("Worked!!?")
+      // Storage access was granted.
+      // Check whether the user is logged in.
+      // If not, do a popup to log the user in.
+    },
+    function () {
+      console.log("didnt :(");
+      // Storage access was denied.
+    }
+  );
+}
+  makeRequest()
 </script>
