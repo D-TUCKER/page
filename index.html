@@ -1,6 +1,7 @@
 <h1>Hello There!</h1>
+<button>Make Request</button>
 <script>
-alert("did this work?");
+// alert("did this work?");
 console.log("did this work?");
   function makeRequest() {
   var promise = document.requestStorageAccess();
@@ -17,5 +18,5 @@ console.log("did this work?");
     }
   );
 }
-  makeRequest()
+  document.querySelector("button").addEventListener("click",makeRequest);
 </script>
